@@ -1,7 +1,9 @@
 import { useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import ProfileCard from "./Card";
+import Card from "./Card";
+import projects from "../projects.json"; // Assuming you have a projects.js file for the images
+
 gsap.registerPlugin(ScrollTrigger);
 
 const Experience = () => {
@@ -15,9 +17,8 @@ const Experience = () => {
         start: "top 0%",
         end: "top -100%",
         scrub: 2,
-        markers: true,
         pin: true,
-        invalidateOnRefresh: true,
+        
       },
     });
 
@@ -43,7 +44,7 @@ const Experience = () => {
       scroller: "body",
       start: "top 0%", // Same start as h1
       onEnter: () => tl.play(), // Play the timeline when entering #page2
-      markers: true,
+   
       invalidateOnRefresh: true,
     });
 
@@ -57,23 +58,34 @@ const Experience = () => {
   return (
     <div
       className="min-h-screen  w-screen z-10 text-gray-300
-       uppercase text-6xl relative"
+        text-6xl relative"
       id="page2"
     >
-      <h1
+      <h1 style={{ fontFamily: 'philosopher-regular', fontWeight: 10 }}
         id="movingText"
-        className="lg:text-[200px] text-[100px] top-0
-        absolute xl:left-[900px] left-[50px] whitespace-nowrap text-center"
+        className="lg:text-[150px] text-[100px] top-2
+        absolute xl:left-[900px] left-[50px] whitespace-nowrap text-center text-gray-600 rounded-full"
       >
-        SKILLS
+        My Projects
       </h1>
-      <div
-        id="parent"
-        className="flex flex-wrap  gap-20
-         relative px-16 justify-between w-[70vw] items-center overflow-visible"
-      >
+      
         {/* Add your images or content here */}
-        <ProfileCard/>
+        <div className=" w-[100%] py-10 pt-48 ">
+      <div className=" mx-auto px-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 sm:mx-12 md:grid-cols-2 md:mx-[70px] rounded-sm lg:grid-cols-2 gap-6  xl:mx-[230px]">
+          {/* Map through the projects array loaded from JSON */}
+          {projects.map((project, index) => (
+            <Card
+              key={index}
+              title={project.title}
+              description={project.description}
+              imageLink={project.imageLink}
+              sourceCodeLink={project.sourceCodeLink}
+            />
+          ))}
+        </div>
+  
+    </div>
       </div>
     </div>
   );

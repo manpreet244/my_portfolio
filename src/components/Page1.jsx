@@ -1,10 +1,12 @@
 import { gsap } from "gsap";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Hero from "./Hero";
+import { FiMenu, FiX } from "react-icons/fi"; // Menu icons
 
 const Page1 = () => {
-  const parent = useRef(null); // Initialize parent ref
-  const tl = useRef(null); 
+  const parent = useRef(null);
+  const tl = useRef(null);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     let ctx = gsap.context(() => {
@@ -17,42 +19,47 @@ const Page1 = () => {
         duration: 0.8,
         stagger: 0.4
       });
-
-      // Uncomment and add additional animations as needed
-      // tl.current.from("#main h1", {
-      //   x: -500,
-      //   opacity: 0,
-      //   duration: 0.8,
-      //   stagger: 0.2
-      // });
-      // tl.current.from("img", {
-      //   x: 100,
-      //   duration: 0.5,
-      //   rotate: 45,
-      //   opacity: 0,
-      //   stagger: 0.6
-      // });
-      // stagger means each h3 will appear one after the other with a delay of 0.6 seconds
     }, parent);
 
-    return () => ctx.revert(); // Clean up on unmount
+    return () => ctx.revert();
   }, []);
 
   return (
-   <div className="text-black  w-screen h-16 p-6 "style={{ fontFamily: 'Pattaya, sans-serif' }}>
-     <div ref={parent} id="nav" 
-     className="flex justify-between text-3xl  items-center ml-24 pl-8 "> 
-           <h3>Manpreet </h3>
-      <div id="nav-part-2" className="flex justify-between  mr-16 pr-16
-      items-center text-black gap-16 text-2xl">
-        <h3>About</h3>
-        <h3>Projects</h3>
-        <h3>Contact</h3>
+    <div className="text-white w-screen p-6 rowdies-regular">
+      <div
+        ref={parent}
+        id="nav"
+        className="flex justify-between items-center px-6 md:px-24 relative z-50"
+      >
+        <h3 className="text-2xl md:text-3xl">Manpreet</h3>
+
+        {/* Desktop Menu */}
+        <div className="hidden md:flex gap-12 text-xl">
+          <h3 className="cursor-pointer">About</h3>
+          <h3 className="cursor-pointer">Projects</h3>
+          <h3 className="cursor-pointer">Contact</h3>
+        </div>
+
+        {/* Mobile Menu Toggle */}
+        <div className="md:hidden text-3xl cursor-pointer z-50" onClick={() => setMenuOpen(!menuOpen)}>
+          {menuOpen ? <FiX /> : <FiMenu />}
+        </div>
+
+        {/* Mobile Menu */}
+        <div
+          className={`absolute top-20 left-0 w-full bg-[#212121] text-white flex flex-col items-center gap-8 py-6 transition-all duration-300 ease-in-out ${
+            menuOpen ? "opacity-100 visible" : "opacity-0 invisible"
+          } md:hidden`}
+        >
+          <h3 className="text-xl" onClick={() => setMenuOpen(false)}>About</h3>
+          <h3 className="text-xl" onClick={() => setMenuOpen(false)}>Projects</h3>
+          <h3 className="text-xl" onClick={() => setMenuOpen(false)}>Contact</h3>
+        </div>
       </div>
+
+      <Hero />
     </div>
-    <Hero/>
-   </div>
   );
 };
 
-export default Page1
+export default Page1;

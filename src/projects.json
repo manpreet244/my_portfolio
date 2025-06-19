@@ -1,0 +1,27 @@
+[
+    {
+      "title": "Project 1",
+      "description": "This is the first project. A simple card component built with React and Tailwind CSS.",
+      "imageLink": "public/assets/logo.png",
+      "sourceCodeLink": "https://github.com/your-repository/project-1"
+    },
+    {
+      "title": "Project 2",
+      "description": "This is the second project. A responsive landing page using Tailwind and React.",
+      "imageLink": "https://via.placeholder.com/400",
+      "sourceCodeLink": "https://github.com/your-repository/project-2"
+    },
+    {
+      "title": "Project 3",
+      "description": "This is the third project. A custom blog built with React, styled using Tailwind.",
+      "imageLink": "https://via.placeholder.com/400",
+      "sourceCodeLink": "https://github.com/your-repository/project-3"
+    },
+    {
+      "title": "Project 4",
+      "description": "This is the fourth project. A task management app built with React and Redux.",
+      "imageLink": "https://via.placeholder.com/400",
+      "sourceCodeLink": "https://github.com/your-repository/project-4"
+    }
+  ]
+  

@@ -30,24 +30,26 @@ import gsap from 'gsap';
   }, []);
 
   return (
-    <div className='flex' style={{ fontFamily: 'Pattaya, sans-serif', fontWeight: 50 }}>
-    <div className="flex flex-col items-start mt-24 ml-32 justify-start h-screen text-xl text-black">
+    <div className='flex anton-regular h-[70vh] ' >
+    <div className="flex flex-col items-start mt-24 md:ml-32
+    ml-4 justify-start text-xl text-black">
       {/* Multiple Boxes */}
-      <div className='flex  h-12 text-gray-600  text-4xl '>
+      <div className='flex  h-20 text-white text-8xl font-bold opacity-10 '>
       <div className="box  ">H</div>
       <div className="box  h-16 ">E</div>
       <div className="box h-16 ">L</div>
       <div className="box  h-16 ">L</div>
       <div className="box h-16 ">O</div>
-      <h5 className='ml-4'>I am</h5>
+      <h5 className='ml-4'>I'm</h5>
       </div>
-      <h1  style={{ fontFamily: 'Pattaya, sans-serif', fontWeight: 50 }} className='text-9xl font-bold ml-16 pattaya-regular'>Manpreet<br></br> Kaur</h1>
-      <h5 className=' w-[600px] pl-10 text-gray-600 text-2xl'>My progress as a developer comes from staying curious and not being afraid to start over.</h5>
+      <h1  className='text-[#ed8a0f] text-7xl tracking-wide ml-16 mt-6 anton-regular '>MANPREET<br></br> KAUR</h1>
+      <h5 className=' w-[400px] md:w-[600px] pl-10 text-xl text-gray-300 roboto-flex-200'> A creative
+         Full Stack Developer with 1+ years of experience in building high-performance,
+         scalable, and responsive web solutions.</h5>
     </div>
     
       <div className="flex  justify-end mt-24">
-        <img src="public/assets/cute.avif" alt="Image 1"
-         className="  laptop h-[550px] w-[600px] rounded-full" />
+       
        
     </div>
 </div>
