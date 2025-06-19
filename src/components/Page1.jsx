@@ -8,6 +8,15 @@ const Page1 = () => {
   const tl = useRef(null);
   const [menuOpen, setMenuOpen] = useState(false);
 
+  // Smooth scroll function
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+      setMenuOpen(false); // Close mobile menu on navigation
+    }
+  };
+
   useEffect(() => {
     let ctx = gsap.context(() => {
       tl.current = gsap.timeline();
@@ -17,7 +26,7 @@ const Page1 = () => {
         opacity: 0,
         delay: 0.4,
         duration: 0.8,
-        stagger: 0.4
+        stagger: 0.4,
       });
     }, parent);
 
@@ -31,17 +40,22 @@ const Page1 = () => {
         id="nav"
         className="flex justify-between items-center px-6 md:px-24 relative z-50"
       >
-        <h3 className="text-2xl md:text-3xl">Manpreet</h3>
+        <h3 className="text-2xl md:text-3xl cursor-pointer" onClick={() => scrollToSection("about")}>
+          Manpreet
+        </h3>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex gap-12 text-xl">
-          <h3 className="cursor-pointer">About</h3>
-          <h3 className="cursor-pointer">Projects</h3>
-          <h3 className="cursor-pointer">Contact</h3>
+          <h3 className="cursor-pointer" onClick={() => scrollToSection("about")}>About</h3>
+          <h3 className="cursor-pointer" onClick={() => scrollToSection("projects")}>Projects</h3>
+          <h3 className="cursor-pointer" onClick={() => scrollToSection("contact")}>Contact</h3>
         </div>
 
         {/* Mobile Menu Toggle */}
-        <div className="md:hidden text-3xl cursor-pointer z-50" onClick={() => setMenuOpen(!menuOpen)}>
+        <div
+          className="md:hidden text-3xl cursor-pointer z-50"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
           {menuOpen ? <FiX /> : <FiMenu />}
         </div>
 
@@ -51,9 +65,9 @@ const Page1 = () => {
             menuOpen ? "opacity-100 visible" : "opacity-0 invisible"
           } md:hidden`}
         >
-          <h3 className="text-xl" onClick={() => setMenuOpen(false)}>About</h3>
-          <h3 className="text-xl" onClick={() => setMenuOpen(false)}>Projects</h3>
-          <h3 className="text-xl" onClick={() => setMenuOpen(false)}>Contact</h3>
+          <h3 className="text-xl cursor-pointer" onClick={() => scrollToSection("about")}>About</h3>
+          <h3 className="text-xl cursor-pointer" onClick={() => scrollToSection("projects")}>Projects</h3>
+          <h3 className="text-xl cursor-pointer" onClick={() => scrollToSection("contact")}>Contact</h3>
         </div>
       </div>
 

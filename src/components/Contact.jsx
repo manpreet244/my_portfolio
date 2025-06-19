@@ -1,9 +1,9 @@
 import React from "react";
 import { MdEmail } from "react-icons/md"; // Mail icon
 
-export default function Contact() {
+export default function Contact({id}) {
   return (
-    <div className="text-white py-16 px-4 text-center relative overflow-hidden">
+    <div className="text-white py-16 px-4 text-center relative overflow-hidden"id={id}>
       {/* Static background stars */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         <div className="w-full h-full bg-[radial-gradient(#ffffff33_1px,transparent_1px)] bg-[size:16px_16px]" />

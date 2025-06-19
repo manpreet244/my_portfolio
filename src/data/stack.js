@@ -30,7 +30,7 @@ export const EXPERIENCE = [
     duration: "May 2024 – June 2025",
     description: `
       Contributed to open-source projects and internal tools with a strong focus on modern frontend and animation frameworks. 
-      Collaborated with global contributors and teams to enhance UI/UX performance, implement reusable components, 
+      Collaborated with contributors and teams to enhance UI/UX performance, implement reusable components, 
       and maintain code quality across multiple codebases.
     `,
   },

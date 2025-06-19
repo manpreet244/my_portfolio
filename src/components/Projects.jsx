@@ -6,7 +6,7 @@ import projects from "../projects.json"; // Assuming you have a projects.js file
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Experience = () => {
+const Projects = () => {
   useEffect(() => {
     // Animation for movingText with ScrollTrigger
     gsap.to("#page2 #movingText", {
@@ -91,4 +91,4 @@ const Experience = () => {
   );
 };
 
-export default Experience;
+export default Projects;

@@ -7,7 +7,7 @@ import { GoStarFill } from "react-icons/go";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const MyStacks = () => {
+const MyStacks = ({id}) => {
   const containerRef = useRef(null);
   const rotateRef = useRef(null);
 
@@ -70,7 +70,7 @@ useGSAP(() => {
 
   return (
     <>
-     <div className="mb-20">
+     <div className="mb-20" id={id}>
        <div className="pl-10 md:pl-44 flex justify-start items-center gap-4">
         <span
           ref={rotateRef}

@@ -7,7 +7,7 @@ import { EXPERIENCE } from "../data/stack.js";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const MyExperience = () => {
+const MyExperience = ({id}) => {
   const containerRef = useRef(null);
   const rotateRef = useRef(null);
 
@@ -64,7 +64,7 @@ const MyExperience = () => {
 
   return (
     <>
-      <div className="mb-24">
+      <div className="mb-24"id={id}>
         <div className="pl-10 md:pl-44 flex justify-start items-center gap-4">
         <span ref={rotateRef} className="text-orange-600 text-2xl inline-block">
           <GoStarFill />
