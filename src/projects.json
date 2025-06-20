@@ -2,7 +2,7 @@
   {
     "title": "News Beast",
     "description": "A news app where you can search for news from different sources and read them. You can filter the news by category and date.",
-    "imageLink": "public/assets/logo.png",
+    "imageLink": "assets/logo.png",
     "sourceCodeLink": "https://newsbeast.netlify.app/"
   },
   {
