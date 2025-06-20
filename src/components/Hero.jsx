@@ -42,9 +42,11 @@ function Hero() {
           scalable, and responsive web solutions. 
 
         </h5>
-        <button className='text-[#ed8a0f] w-fit
+       <a href="https://drive.google.com/file/d/1oOXBXB6HbuuIJYkTq0zab1ZqVhzQuN1X/view?usp=sharing">
+         <button className='text-[#ed8a0f] w-fit
          px-4 py-1 mt-4 bg-gray-400 bg-opacity-10 font-sans text-lg tracking-wide rounded-xl'> 
           VIEW RESUME </button>
+        </a>
       </div>
 
       {/* Right: Image (only on large screens) */}
