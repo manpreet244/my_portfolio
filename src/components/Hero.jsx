@@ -18,7 +18,7 @@ function Hero() {
   return (
     <div className='flex flex-col md:mx-12 lg:flex-row anton-regular min-h-[80vh] w-full px-6 lg:px-20 gap-10 lg:gap-32'>
       
-      {/* Left: Text Content */}
+   
       <div className="flex flex-col justify-center mt-20 text-xl text-black flex-1">
         {/* Animated "HELLO" */}
         <div className='flex h-18 text-white text-6xl md:text-8xl font-bold opacity-10'>

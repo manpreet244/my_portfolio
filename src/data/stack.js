@@ -9,11 +9,11 @@ export const FRONTEND_STACK = {
     { name: "Framer Motion", icon: "assets/framer-logo.jpg" },
   ],
   backend: [
-    { name: "Node", icon: "assets/js-logo.png" },
-    { name: "Express.js", icon: "assets/react-logo.png" },
+    { name: "Node", icon: "assets/node-logo.png" },
+    { name: "Express.js", icon: "assets/express-logo.png" },
   ],
   database: [
-    { name: "MongoDB", icon: "assets/js-logo.png" },
+    { name: "MongoDB", icon: "assets/mongo-logo.png" },
 
   ],
   language: [
