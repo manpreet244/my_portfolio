@@ -17,7 +17,7 @@ export default function App() {
         </div>
       </div>
 
-      {/* Sections with ids for scrolling */}
+   
       <About id="about" />
       <MyStacks  />
       <MyExperience id="projects"/>

@@ -7,10 +7,11 @@ import { EXPERIENCE } from "../data/stack.js";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const MyExperience = ({id}) => {
+const MyExperience = ({ id }) => {
   const containerRef = useRef(null);
   const rotateRef = useRef(null);
 
+  // Star rotation
   useGSAP(() => {
     if (rotateRef.current) {
       gsap.to(rotateRef.current, {
@@ -22,13 +23,14 @@ const MyExperience = ({id}) => {
     }
   }, []);
 
+  // Scroll animation for each experience section
   useGSAP(() => {
     const sections = containerRef.current?.querySelectorAll(".experience-section");
-
     if (!sections?.length) return;
 
     sections.forEach((section) => {
       const title = section.querySelector(".experience-title");
+      const company = section.querySelector(".experience-company");
       const date = section.querySelector(".experience-date");
       const desc = section.querySelector(".experience-description");
 
@@ -41,16 +43,20 @@ const MyExperience = ({id}) => {
         },
       });
 
-      tl.from([title, date], {
+      tl.from([title, company, date], {
         opacity: 0,
         y: 40,
         stagger: 0.2,
         ease: "power1.out",
-      }).from(desc, {
-        opacity: 0,
-        x: 30,
-        ease: "power1.out",
-      }, "-=0.3");
+      }).from(
+        desc,
+        {
+          opacity: 0,
+          x: 30,
+          ease: "power1.out",
+        },
+        "-=0.3"
+      );
     });
 
     const handleLoad = () => ScrollTrigger.refresh();
@@ -63,21 +69,22 @@ const MyExperience = ({id}) => {
   }, { scope: containerRef });
 
   return (
-    <>
-      <div className="mb-24"id={id}>
-        <div className="pl-10 md:pl-44 flex justify-start items-center gap-4">
-        <span ref={rotateRef} className="text-orange-600 text-2xl inline-block">
-          <GoStarFill />
-        </span>
-        <h2 className="roboto-flex-200 text-white text-2xl md:text-3xl font-bold my-6 tracking-wider">
-          MY EXPERIENCE
-        </h2>
-      </div>
-
+    <div className="mb-24" id={id}>
       <div
         ref={containerRef}
         className="flex relative flex-col gap-16 px-4 md:px-8 w-full m-2 lg:w-[80%] bg-[#212121] mx-auto text-white"
       >
+        {/* Aligned Header */}
+        <div className="flex items-center gap-4">
+          <span ref={rotateRef} className="text-orange-600 text-2xl inline-block">
+            <GoStarFill />
+          </span>
+          <h2 className="roboto-flex-200 text-white text-2xl md:text-3xl font-bold my-6 tracking-wider">
+            MY EXPERIENCE
+          </h2>
+        </div>
+
+        {/* Experience Sections */}
         {EXPERIENCE.map((exp, index) => (
           <div
             key={index}
@@ -87,6 +94,9 @@ const MyExperience = ({id}) => {
               <h3 className="experience-title anton-regular text-5xl lg:text-7xl text-[#b5b5b5] uppercase leading-tight">
                 {exp.role}
               </h3>
+              <p className="experience-company text-gray-400 mt-2 text-lg sm:text-base">
+                {exp.company}
+              </p>
               <p className="experience-date text-gray-400 mt-2 text-sm sm:text-base">
                 {exp.duration}
               </p>
@@ -99,8 +109,7 @@ const MyExperience = ({id}) => {
           </div>
         ))}
       </div>
-        </div>
-    </>
+    </div>
   );
 };
 

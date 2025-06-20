@@ -14,24 +14,27 @@ export const FRONTEND_STACK = {
   ],
   database: [
     { name: "MongoDB", icon: "assets/js-logo.png" },
-    { name: "SQL", icon: "assets/react-logo.png" },
-    { name: "Redux", icon: "assets/redux-logo.png" },
-    { name: "Next.Js", icon: "assets/next-logo.jpg" },
-    { name: "GSAP", icon: "assets/gsap-logo.png" },
-    { name: "Tailwind CSS", icon: "assets/tailwind-logo.png" },
-    { name: "Framer Motion", icon: "assets/framer-logo.jpg" },
+
+  ],
+  language: [
+     { name: "Javascript", icon: "assets/js-logo.png" },
+    { name: "Java", icon: "assets/java_logo.png" },
+
   ],
 };
 
 export const EXPERIENCE = [
   {
     company: "Curious Business Solutions",
-    role: "Open Source Developer",
+    role: "Frontend Developer",
     duration: "May 2024 – June 2025",
     description: `
-      Contributed to open-source projects and internal tools with a strong focus on modern frontend and animation frameworks. 
-      Collaborated with contributors and teams to enhance UI/UX performance, implement reusable components, 
-      and maintain code quality across multiple codebases.
+    Worked as a front-end developer in this growing startup .
+     I collaborate closely with designers, backend developers,
+      and product teams to build responsive, accessible, 
+      and performance-optimized user interfaces. I was responsible for
+       translating UI/UX designs into functional code using modern frameworks like React,
+        and API integration . 
     `,
   },
 ];

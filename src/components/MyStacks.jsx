@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { FRONTEND_STACK } from "../data/stack.js";
@@ -7,22 +7,20 @@ import { GoStarFill } from "react-icons/go";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const MyStacks = ({id}) => {
+const MyStacks = ({ id }) => {
   const containerRef = useRef(null);
   const rotateRef = useRef(null);
 
-useGSAP(() => {
-  if (!rotateRef.current) return;
+  useGSAP(() => {
+    if (!rotateRef.current) return;
 
-  gsap.to(rotateRef.current, {
-    rotate: 360,
-    duration: 6,
-    ease: "linear",
-    repeat: -1,
-    
-  });
-}, []);
-
+    gsap.to(rotateRef.current, {
+      rotate: 360,
+      duration: 6,
+      ease: "linear",
+      repeat: -1,
+    });
+  }, []);
 
   useGSAP(() => {
     const sections = containerRef.current?.querySelectorAll(".stack-section");
@@ -39,7 +37,6 @@ useGSAP(() => {
           start: "top 85%",
           end: "bottom 60%",
           scrub: 1,
-          markers: false,
         },
       });
 
@@ -69,24 +66,25 @@ useGSAP(() => {
   }, { scope: containerRef });
 
   return (
-    <>
-     <div className="mb-20" id={id}>
-       <div className="pl-10 md:pl-44 flex justify-start items-center gap-4">
-        <span
-          ref={rotateRef}
-          className="text-orange-600 text-2xl inline-block"
-        >
-          <GoStarFill />
-        </span>
-        <h2 className="roboto-flex-200  text-white text-2xl md:text-3xl font-bold my-6 tracking-wider">
-          MY STACK
-        </h2>
-      </div>
-
+    <div className="mb-20" id={id}>
       <div
         ref={containerRef}
         className="flex relative flex-col gap-16 px-4 md:px-8 w-full m-2 lg:w-[80%] bg-[#212121] mx-auto text-white"
       >
+       
+        <div className="flex items-center gap-4">
+          <span
+            ref={rotateRef}
+            className="text-orange-600 text-2xl inline-block"
+          >
+            <GoStarFill />
+          </span>
+          <h2 className="roboto-flex-200 text-white text-2xl md:text-3xl font-bold my-6 tracking-wider">
+            MY STACK
+          </h2>
+        </div>
+
+        {/* Tech stack sections */}
         {Object.entries(FRONTEND_STACK).map(([category, techs]) => (
           <div
             key={category}
@@ -117,8 +115,7 @@ useGSAP(() => {
           </div>
         ))}
       </div>
-     </div>
-    </>
+    </div>
   );
 };
 
