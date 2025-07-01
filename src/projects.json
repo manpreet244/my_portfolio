@@ -1,4 +1,10 @@
 [
+    {
+    "title": "SEO Blog App",
+    "description": "Built a full-stack (Next.js/React) SEO-friendly blog application using Next.js, React, Node.js, and Express. Features include create/delete/view blogs, JWT auth, EmailGrid integration, and related posts. Fully optimized with SSR and dynamic routing.",
+    "imageLink": "assets/seoblog-logo.jpg",
+    "sourceCodeLink": "https://seoblog-9uf1.vercel.app/"
+  },
   {
     "title": "News Beast",
     "description": "A news app where you can search for news from different sources and read them. You can filter the news by category and date.",
@@ -16,11 +22,6 @@
     "description": "Developed an IMDb clone using React to demonstrate proficiency in front-end development, state management, and API integration. This responsive web app allows users to browse, search, and view information about movies, similar to IMDb.",
     "imageLink": "assets/imdb.jpg",
     "sourceCodeLink": "https://movies-app-sigma-ten.vercel.app/movie/1127110"
-  },
-  {
-    "title": "SEO Blog App",
-    "description": "Built a full-stack (Next.js/React) SEO-friendly blog application using Next.js, React, Node.js, and Express. Features include create/delete/view blogs, JWT auth, EmailGrid integration, and related posts. Fully optimized with SSR and dynamic routing.",
-    "imageLink": "assets/seoblog-logo.jpg",
-    "sourceCodeLink": "https://github.com/manpreet244/seoblog"
   }
+
 ]

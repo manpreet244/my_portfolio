@@ -7,7 +7,7 @@ import { EXPERIENCE } from "../data/stack.js";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const MyExperience = ({ id }) => {
+const MyExperience = () => {
   const containerRef = useRef(null);
   const rotateRef = useRef(null);
 
@@ -69,7 +69,7 @@ const MyExperience = ({ id }) => {
   }, { scope: containerRef });
 
   return (
-    <div className="mb-24" id={id}>
+    <div className="mb-24">
       <div
         ref={containerRef}
         className="flex relative flex-col gap-16 px-4 md:px-8 w-full m-2 lg:w-[80%] bg-[#212121] mx-auto text-white"

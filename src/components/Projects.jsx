@@ -6,7 +6,7 @@ import projects from "../projects.json";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Projects = () => {
+const Projects = ({ id }) => {
   useEffect(() => {
     // Animate the heading text
     gsap.to("#page2 #movingText", {
@@ -51,9 +51,9 @@ const Projects = () => {
   }, []);
 
   return (
-    <div
+    <div  id={id}
       className="min-h-screen w-screen z-10 text-gray-300 text-6xl relative"
-      id="page2"
+     
     >
       {/* Moving text heading */}
       <h1

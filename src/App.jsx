@@ -20,8 +20,8 @@ export default function App() {
    
       <About id="about" />
       <MyStacks  />
-      <MyExperience id="projects"/>
-      <Projects />
+      <MyExperience />
+      <Projects id="projects"/>
       <Contact id="contact" />
     </div>
   );

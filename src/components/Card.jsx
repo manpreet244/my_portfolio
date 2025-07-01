@@ -11,10 +11,10 @@ const Card = ({ key, title, description, imageLink, sourceCodeLink }) => {
       hover:border-3 hover:shadow-xl ease-in-out mx-auto
       flex flex-col justify-between bg-[#121212]">
 
-      {/* Content section */}
-      <div className="flex-1">
+      <div className="flex-1 ">
         <img
-          className="w-16 h-16 sm:w-20 sm:h-20 ml-4 sm:ml-6 mt-4 rounded-full border-2 object-cover"
+          className="w-16 h-16 sm:w-20 sm:h-20 ml-4 sm:ml-6 mt-4 rounded-full border-2
+           object-cover"
           src={imageLink}
           alt="Card image"
         />
@@ -28,7 +28,6 @@ const Card = ({ key, title, description, imageLink, sourceCodeLink }) => {
         </div>
       </div>
 
-      {/* Button section pinned to bottom */}
       <div className="px-2 sm:px-4 pb-4 mt-auto">
       <a href={sourceCodeLink}>
           <button
