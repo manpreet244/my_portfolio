@@ -9,10 +9,10 @@ gsap.registerPlugin(ScrollTrigger);
 const Projects = ({ id }) => {
   useEffect(() => {
     // Animate the heading text
-    gsap.to("#page2 #movingText", {
+    gsap.to(`#${id} #movingText`, {
       x: "-160%",
       scrollTrigger: {
-        trigger: "#page2",
+        trigger: `#${id}`,
         scroller: "body",
         start: "top 0%",
         end: "top -40%",
@@ -37,7 +37,7 @@ const Projects = ({ id }) => {
     });
 
     ScrollTrigger.create({
-      trigger: "#page2",
+      trigger: `#${id}`,
       scroller: "body",
       start: "top 0%",
       onEnter: () => tl.play(),
