@@ -25,6 +25,15 @@ export const FRONTEND_STACK = {
 
 export const EXPERIENCE = [
   {
+    company: "Shuuter Lifters",
+    role: "Frontend Developer",
+    duration: "Sep 2025 – Present",
+    description: `
+    Frontend Developer . 
+    `,
+  },
+  
+  {
     company: "Curious Business Solutions",
     role: "Full stack Developer",
     duration: "May 2024 – Aug 2025",
