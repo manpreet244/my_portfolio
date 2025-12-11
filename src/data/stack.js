@@ -26,10 +26,10 @@ export const FRONTEND_STACK = {
 export const EXPERIENCE = [
   {
     company: "Curious Business Solutions",
-    role: "Frontend Developer",
-    duration: "May 2024 – June 2025",
+    role: "Full stack Developer",
+    duration: "May 2024 – Aug 2025",
     description: `
-    Worked as a front-end developer in this growing startup .
+    Worked as a full stack developer in this growing startup .
      I collaborate closely with designers, backend developers,
       and product teams to build responsive, accessible, 
       and performance-optimized user interfaces. I was responsible for
