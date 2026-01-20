@@ -26,10 +26,13 @@ export const FRONTEND_STACK = {
 export const EXPERIENCE = [
   {
     company: "Shutter Lifters",
-    role: "Mern stack Developer",
+    role: "MERN Stack Developer",
     duration: "June 2025 – Dec 2025",
     description: `
-    Frontend Developer . 
+    Worked as a MERN Stack Developer building scalable web applications using MongoDB, Express.js, React.js, and Node.js.
+    Developed responsive user interfaces with React and modern JavaScript (ES6+).
+    Designed and implemented RESTful APIs, handled server-side logic, and managed database schemas.
+    Integrated authentication, optimized application performance, and collaborated with cross-functional teams to deliver production-ready features.
     `,
   },
   
