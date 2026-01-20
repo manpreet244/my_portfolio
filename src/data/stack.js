@@ -25,9 +25,9 @@ export const FRONTEND_STACK = {
 
 export const EXPERIENCE = [
   {
-    company: "Shuuter Lifters",
-    role: "Frontend Developer",
-    duration: "Sep 2025 – Present",
+    company: "Shutter Lifters",
+    role: "Mern stack Developer",
+    duration: "June 2025 – Dec 2025",
     description: `
     Frontend Developer . 
     `,
@@ -35,7 +35,7 @@ export const EXPERIENCE = [
   
   {
     company: "Curious Business Solutions",
-    role: "Full stack Developer",
+    role: "Full stack Developer )(Freelance",
     duration: "May 2024 – Aug 2025",
     description: `
     Worked as a full stack developer in this growing startup .
