@@ -25,11 +25,11 @@ export const FRONTEND_STACK = {
 
 export const EXPERIENCE = [
   {
-    company: "Shutter Lifters",
-    role: "MERN Stack Developer",
+    company: "Shutterlifters Solutions Private Limited",
+    role: "Frontend Developer",
     duration: "June 2025 – Dec 2025",
     description: `
-    Worked as a MERN Stack Developer building scalable web applications using MongoDB, Express.js, React.js, and Node.js.
+    Worked as a MERN Stack Developer building  web applications using MongoDB, Express.js, React.js, and Node.js.
     Developed responsive user interfaces with React and modern JavaScript (ES6+).
     Designed and implemented RESTful APIs, handled server-side logic, and managed database schemas.
     Integrated authentication, optimized application performance, and collaborated with cross-functional teams to deliver production-ready features.
@@ -38,7 +38,7 @@ export const EXPERIENCE = [
   
   {
     company: "Curious Business Solutions",
-    role: "Full stack Developer )(Freelance",
+    role: "Full stack Developer ",
     duration: "May 2024 – Aug 2025",
     description: `
     Worked as a full stack developer in this growing startup .
